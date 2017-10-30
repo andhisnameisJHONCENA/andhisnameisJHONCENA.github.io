@@ -1,0 +1,28 @@
+<html>
+	<head>
+		<title>
+        Test Hide
+        </title>
+        <style>
+            img{
+                height:400px;
+            }
+        </style>
+        <script>
+            function hideimg(x) {
+                document.getElementById(x).style.visibility="hidden";
+
+                setTimeout(function() { getImg(x); }, 1000);
+            }
+
+            function getImg(x){
+                document.getElementById(x).src = "https://i.pinimg.com/736x/ae/8a/2a/ae8a2a20bed94879d2979e5b0fd040f6.jpg";
+                document.getElementById(x).style.visibility="visible";
+            }
+        </script>   
+    </head>
+    <body style="background-color:gold;">
+     <img id="img1" src="http://u.rubixy.com/u/1de37647.png" onclick="hideimg('img1');">
+     <img id="img2" src="https://i.redditmedia.com/H_7eAsn6_TydGAcPThsIp9xvh1qz9fpgJw7G9p7f8m4.jpg?w=573&s=01ee49d426aa80db20d2f4cc080218c0" onclick="hideimg('img2');">
+	</body>
+</html>
