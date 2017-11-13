@@ -1,13 +1,22 @@
 <html>
 	<head>
 		<title>clickable</title>
+
+        <script>
+            function clickMe(){
+                document.getElementById('circle').innerHTML = "give me food OR DIE!"; 
+            }
+        </script>
     </head>
     <body>
 		<nav>
-        	<img src="https://i.ytimg.com/vi/AN5sN2waJiI/hqdefault.jpg"/>
+        <section>	
+        <div id="circle" style="height:75px;width:75px;padding:20px;background-color:gray;border-radius:300px;position:relative;top:220px;left:30px"></div>
+            <img src="https://i.ytimg.com/vi/AN5sN2waJiI/hqdefault.jpg"/>
             <br>           
             Name: <input type="text" /> 
-        	<input type="butten" value="" ="click me!"/>
+        	<input type="button" value="Click Me!" onclick="clickMe();" />
+         </section>   
         	<section>
         	<a href="index.html">
         		Home
