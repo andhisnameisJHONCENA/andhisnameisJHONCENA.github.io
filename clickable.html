@@ -4,18 +4,27 @@
 
         <script>
             function clickMe(){
-                document.getElementById('circle').innerHTML = "give me food OR DIE!"; 
+               var name = document.getElementById("nametext").value;
+               document.getElementById('circle').innerHTML = name + ", please give me food or DIE PUNNY HUMMAN!"; 
+               
+               var name = document.getElementById("nametext").value;
+               document.getElementById('p').innerHTML = name + ", seriously please give me foo-OH MY GOD IT'S A SQUIRLE"; 
             }
         </script>
     </head>
     <body>
 		<nav>
         <section>	
-        <div id="circle" style="height:75px;width:75px;padding:20px;background-color:gray;border-radius:300px;position:relative;top:220px;left:30px"></div>
-            <img src="https://i.ytimg.com/vi/AN5sN2waJiI/hqdefault.jpg"/>
+        <div id="circle" style="height:85px;width:85px;padding:20px;background-color:gray;border-radius:300px;position:relative;top:220px;left:20px"></div>
+        
+        <div id="p" style="height:100px;width:100px;padding:20px;background-color:gray;border-radius:300px;position:relative;top:350px;left:20px"></div>    
+             <img src="https://i.ytimg.com/vi/AN5sN2waJiI/hqdefault.jpg"/>
             <br>           
-            Name: <input type="text" /> 
+            Name: <input type="text" id="nametext" value="" /> 
         	<input type="button" value="Click Me!" onclick="clickMe();" />
+
+            Name: <input type="text" id="nametext" value="your just a bad person" /> 
+        	<input type="button" value="Click Me!" onclick="clickMe();" />        	
          </section>   
         	<section>
         	<a href="index.html">
