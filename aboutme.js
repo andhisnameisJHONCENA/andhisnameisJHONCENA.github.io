@@ -157,8 +157,8 @@ function update(){
         gameOver = true; 
     //checks for collisions with fruit 
     else if(snakeX == fX && snakeY == fY){ 
-        //adds 4 to the score 
-        score+=4; 
+        //adds 10 to the score 
+        score+=10; 
         //creates new fruit, which automatically replaces the old one 
         createFruit(); 
         //adds the set increment to the length of the snake making it longer 

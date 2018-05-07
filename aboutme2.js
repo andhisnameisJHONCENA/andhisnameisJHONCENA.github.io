@@ -25,7 +25,7 @@ var drawModule = (function () {
         ctx.fillRect(x*snakeSize, y*snakeSize, snakeSize, snakeSize);
         // This is the single square 
         ctx.fillStyle = 'red';
-        ctx.fillRect(x*snakeSize+1, y*snakeSize+1, snakeSize-2, snakeSize-2);
+        ctx.fillRect(x*snakeSize+5, y*snakeSize+5, snakeSize-4, snakeSize-4);
     }
 
     var scoreText = function() {
