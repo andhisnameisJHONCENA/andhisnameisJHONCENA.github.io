@@ -1,4 +1,3 @@
-//settings 
 var snakeX = 2; 
 var snakeY = 2; 
 var height = 28; 
@@ -80,6 +79,7 @@ function getType(x,y){
 } 
  
 function createFruit(){ 
+
     var found = false; 
     while(!found && (length < (width-2)*(height-2)+1)){ 
         var fruitX = rand(1,width-1); 
@@ -90,17 +90,23 @@ function createFruit(){
     set(fruitX, fruitY, "fruit"); 
     fX = fruitX; 
     fY = fruitY; 
+    
 } 
+function ReplacingImage(){
+ 
+    document.getElementById("").src="images.png"
+ 
+}
  
 /** 
  * NOTE: notice use of new variable tempdir 
  */ 
 window.addEventListener("keypress", function key(event){ 
-    //if key is w set direction up 
+    //if key is W set direction up 
     var key = event.keyCode; 
     if(direction != -1 && (key == 119 || key == 87)) 
         tempdir = 0; 
-    //if key is s set direction down 
+    //if key is S set direction down 
     else if(direction != 0 && (key == 115 || key == 83)) 
         tempdir = -1; 
     //if key is A set direction left 
@@ -155,10 +161,11 @@ function update(){
     //checks for collision with wall 
     if(snakeX == 0 || snakeX == width-1 || snakeY == 0 || snakeY == height-1) 
         gameOver = true; 
+        
     //checks for collisions with fruit 
     else if(snakeX == fX && snakeY == fY){ 
-        //adds 10 to the score 
-        score+=10; 
+        //adds 4 to the score 
+        score+=4; 
         //creates new fruit, which automatically replaces the old one 
         createFruit(); 
         //adds the set increment to the length of the snake making it longer 
